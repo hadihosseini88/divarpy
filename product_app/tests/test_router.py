@@ -17,7 +17,7 @@ class TestRouter(TestSetup):
         del self.fake_product["_id"]
         response = test_client.post("/", json=self.fake_product)
         response = response.json()
-        assert response["name"] == self.fake_product["name"]
+        assert self.get_product(response)["name"] == self.fake_product["name"]
 
     def test_user_can_update_product(self):
         query = self.create_fake_product()
@@ -26,7 +26,7 @@ class TestRouter(TestSetup):
             f"/{query.inserted_id}", json=self.fake_product
         )
         response = response.json()
-        assert response["name"] == self.fake_product["name"]
+        assert response == 1
 
     def test_user_can_partial_update_product(self):
         query = self.create_fake_product()
@@ -36,7 +36,7 @@ class TestRouter(TestSetup):
             f"/{query.inserted_id}", json=self.fake_product  
         )
         response = response.json()
-        assert response["name"] == self.fake_product["name"]
+        assert response == 1
 
     def test_user_can_delete_product(self):
         query = self.create_fake_product()
