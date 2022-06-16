@@ -1,0 +1,22 @@
+
+
+بعد نصب fast api باید venv نصب بشود
+python -m venv venv
+
+pip install fastapi
+pip install "uvicorn[standard]"
+pip install pytest
+pip install requests
+pip install fastapi_utils
+pip install motor
+
+برای اجرای محیط هر سری باید ران بشود
+venv\scripts\activate
+
+برای ساخت یک فریز از پلاگین ها و ماژول های وابسته به هم که برای ما استفاده می شود
+ pip freeze > requirements.txt
+ دلیل این است ممکنه هر ماژول ورژنش تغییر کنه
+
+
+برای شروع مجازی سازی و تست استفاده میشه
+ uvicorn main:app --reload
