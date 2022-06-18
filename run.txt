@@ -5,9 +5,9 @@ python -m venv venv
 
 pip install fastapi
 pip install "uvicorn[standard]"
+pip install fastapi-utils
 pip install pytest
 pip install requests
-pip install fastapi_utils
 pip install motor
 
 برای اجرای محیط هر سری باید ران بشود
