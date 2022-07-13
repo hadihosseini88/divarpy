@@ -14,7 +14,7 @@ pip install motor
 venv\scripts\activate
 
 برای ساخت یک فریز از پلاگین ها و ماژول های وابسته به هم که برای ما استفاده می شود
- pip freeze > requirements.txt
+ pip freeze -> requirements.txt
  دلیل این است ممکنه هر ماژول ورژنش تغییر کنه
 
 
